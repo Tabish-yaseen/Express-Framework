@@ -40,7 +40,7 @@ fs.readFile('username.txt',(err,data)=>{
         
     
     router.post('/',(req,res,next)=>{
-        console.log(req.body)
+        console.log(req.body);
         data=`${req.body.username}: ${req.body.chat}, `
         fs.writeFile('username.txt',data ,{flag:'a'},(err)=>{
             if(err){
@@ -53,6 +53,5 @@ fs.readFile('username.txt',(err,data)=>{
         });
        
     })
-
 
 module.exports=router
